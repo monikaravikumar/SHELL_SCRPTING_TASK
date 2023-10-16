@@ -1,0 +1,21 @@
+#!/bin/ksh
+#Script to obtain the Grade by reading the input from user#
+set -e
+echo "Enter the Mark obtained"
+read Mark
+if [ $Mark -ge 90 ];
+then
+        result="GRADE A"
+        echo "$result"
+elif [[ $Mark -ge 80 && $Mark -lt 90 ]]
+then
+        result="GRADE B"
+        echo "$result"
+elif [[ $Mark -ge 70 && $Mark -lt 80 ]]
+then
+        result="GRADE C"
+        echo "$result"
+else
+        result="GRADE D"
+        echo "$result"
+fi
